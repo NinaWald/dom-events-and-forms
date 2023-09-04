@@ -3,6 +3,7 @@ const button = document.getElementById("button");
 const imageContainer = document.getElementById("imageContainer");
 const orderButton = document.getElementById("orderButton");
 const resetButton = document.getElementById("resetButton");
+// these lines reference to the HTML element ids, the ids store variables
 
 const fruitImages = {
     apple: "apple.png",
@@ -11,7 +12,17 @@ const fruitImages = {
     orange: "orange.png",
     order: "thumb.png"
 };
+/*
+This block defines an object called fruitImages that maps fruit names
+ (e.g., "apple") to image file names (e.g., "apple.png").
+ It also includes an entry for "order" to represent the thumb-image used when placing an order.
+*/
 
+/*
+This line below adds a click event listener to the button element.
+ When the button is clicked,
+ the function inside the parentheses (an arrow function) is executed.
+*/
 button.addEventListener("click", () => {
     const selectedFruit = fruitDropdown.value.toLowerCase();
 
@@ -28,7 +39,14 @@ button.addEventListener("click", () => {
         imageContainer.style.backgroundColor = "white";
     }
 });
-
+/*
+This line below adds a click event listener to the orderButton element.
+ When the "order fruit" button is clicked,
+ the function inside the parentheses (an arrow function) is executed.
+ When the "order fruit" button is clicked,
+  this line sets the src attribute of the imageContainer to display the order image(thumb),
+  indicating that an order is being processed.
+*/
 orderButton.addEventListener("click", () => {
     imageContainer.src = `images/${fruitImages.order}`;
     imageContainer.alt = "Order";
