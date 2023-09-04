@@ -1,0 +1,130 @@
+.container {
+    background-color: bisque;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#main-header {
+    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+    
+}
+
+img {
+    margin: 40px;
+}
+
+#header-title {
+    font-size: 55px; /* Adjust the font size as needed */
+    color: #333; /* Set the text color */
+    margin: 10px; /* Add margin (space) around the heading */
+    padding: 0; /* Remove any padding */
+    /* Add more styles as needed */
+}
+
+
+label {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ 
+}
+
+form {
+    background-color: rgb(213, 200, 225);
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input[type="text"] {
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form h2 {
+    font-size: 16px;
+    color: #0c0b0b;
+    margin-left: 20px;
+}
+
+.btn {
+    background-color: #e44198;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: x-large;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.button-container {
+    margin: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the select dropdown */
+#fruitDropdown {
+    font-size: larger;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Dropdown background color */
+    color: #333; /* Dropdown text color */
+    cursor: pointer;
+}
+
+/* Style the individual option elements */
+#fruitDropdown option {
+    padding: 10px;
+    text-align: center;
+    background-color: #fff; /* Option background color */
+    color: #333; /* Option text color */
+    cursor: pointer;
+}
+
+/* Style the hover effect for option elements */
+#fruitDropdown option:hover {
+    background-color: #f0f0f0; /* Hover background color */
+    cursor: pointer;
+}
+
+#imageContainer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: solid 2px black;
+    border-radius: 50px;
+    padding: 50px;
+    margin: 0;
+}
+
+
+.image-fruit {
+    
+    display: flex;
+    justify-content: center;
+}
