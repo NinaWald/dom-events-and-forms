@@ -1,9 +1,16 @@
+/*
+In this top section, I am using the const keyword to declare and assign values
+ to variables that represent various HTML elements by their IDs.
+  This makes it clear which elements you're working with in your code,
+ and it's a good practice for maintaining code structure and organization.
+*/
+
 const fruitDropdown = document.getElementById("fruitDropdown");
 const button = document.getElementById("button");
 const imageContainer = document.getElementById("imageContainer");
 const orderButton = document.getElementById("orderButton");
 const resetButton = document.getElementById("resetButton");
-// these lines reference to the HTML element ids, the ids store variables
+// These lines reference to the HTML element ids
 
 const fruitImages = {
     apple: "apple.png",
