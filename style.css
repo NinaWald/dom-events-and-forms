@@ -31,11 +31,12 @@ label {
    display: flex;
    align-items: center;
    justify-content: center;
- 
+   background-color: rgb(213, 200, 225);
+   flex-direction: column;
 }
 
 form {
-    background-color: rgb(213, 200, 225);
+    
     height: 200px;
     width: 100%;
     display: flex;
@@ -67,7 +68,6 @@ form h2 {
     border-radius: 5px;
     cursor: pointer;
     display: flex;
-    
 }
 
 .btn:hover {
@@ -75,7 +75,7 @@ form h2 {
 }
 
 .button-container {
-    margin: 50px;
+    margin-bottom: 40px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -107,7 +107,7 @@ form h2 {
 /* Style the hover effect for option elements */
 #fruitDropdown option:hover {
     background-color: #f0f0f0; /* Hover background color */
-    cursor: pointer;
+    
 }
 
 #imageContainer {
@@ -124,7 +124,35 @@ form h2 {
 
 
 .image-fruit {
-    
+    margin-top: 50px;
     display: flex;
     justify-content: center;
+}
+
+.order-button-container {
+    margin: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.order-btn {
+    background-color: #50d7b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: x-large;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
+.reset-btn {
+    background-color: #d04747;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: x-large;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
 }

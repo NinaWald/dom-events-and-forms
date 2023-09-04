@@ -18,24 +18,36 @@
         <form>
             <h1>Choose your favorite fruit</h1>
             <select name="fruits" id="fruitDropdown">
-                
+                <option value="" disabled selected>select here</option>
                 <option value="apple">APPLE</option>
                 <option value="banana">BANANA</option>
                 <option value="cherry">CHERRY</option>
                 <option value="orange">ORANGE</option>
             </select>
         </form>
+        <div class="button-container">
+            <button id="button" class="btn">
+                select fruit
+            </button>
+        </div>
     </label>
 
-    <div class="button-container">
-        <button id="button" class="btn">
-            select fruit
-        </button>
-    </div>
+   
 
     <div class="image-fruit">
         <img id="imageContainer" src="images/white.png" alt="fruit">
     </div>
+    <div class="order-button-container">
+        <button id="orderButton" class="order-btn">
+            order fruit
+        </button>
+    </div>
+    <div class="reset-button-container">
+        <button id="resetButton" class="reset-btn">
+            Reset
+        </button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

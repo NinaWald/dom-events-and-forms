@@ -1,12 +1,15 @@
 const fruitDropdown = document.getElementById("fruitDropdown");
 const button = document.getElementById("button");
 const imageContainer = document.getElementById("imageContainer");
+const orderButton = document.getElementById("orderButton");
+const resetButton = document.getElementById("resetButton");
 
 const fruitImages = {
     apple: "apple.png",
     banana: "banana.png",
     cherry: "cherries.png",
-    orange: "orange.png"
+    orange: "orange.png",
+    order: "thumb.png"
 };
 
 button.addEventListener("click", () => {
@@ -24,4 +27,18 @@ button.addEventListener("click", () => {
         imageContainer.alt = "Selected Fruit Image"; // Reset the alt attribute
         imageContainer.style.backgroundColor = "white";
     }
+});
+
+orderButton.addEventListener("click", () => {
+    imageContainer.src = `images/${fruitImages.order}`;
+    imageContainer.alt = "Order";
+})
+
+resetButton.addEventListener("click", () => {
+    // Reset the imageContainer to its initial state
+    imageContainer.src = "images/white.png";
+    imageContainer.alt = "fruit";
+
+    // Reset the dropdown to its initial state
+    fruitDropdown.value = "";
 });
