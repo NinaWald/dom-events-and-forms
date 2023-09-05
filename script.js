@@ -10,6 +10,7 @@ const button = document.getElementById("button");
 const imageContainer = document.getElementById("imageContainer");
 const orderButton = document.getElementById("orderButton");
 const resetButton = document.getElementById("resetButton");
+const randomButton = document.getElementById("random-button");
 // These lines reference to the HTML element ids
 
 const fruitImages = {
@@ -58,6 +59,25 @@ orderButton.addEventListener("click", () => {
     imageContainer.src = `images/${fruitImages.order}`;
     imageContainer.alt = "Order";
 })
+
+
+// An array of fruit names for the random selector
+const fruits = ["apple", "banana", "cherry", "orange"];
+
+randomButton.addEventListener("click", () => {
+    // Generate a random index within the range of the fruits array
+    const randomIndex = Math.floor(Math.random() * fruits.length);
+    
+    // Get the random fruit name using the random index
+    const randomFruit = fruits[randomIndex];
+
+    // Set the src and alt attributes of the imageContainer to display the random fruit image
+    imageContainer.src = `images/${fruitImages[randomFruit]}`;
+    imageContainer.alt = randomFruit;
+
+    // Add a console.log to show the selected random fruit
+    console.log(`Randomly selected fruit: ${randomFruit}`);
+});
 
 resetButton.addEventListener("click", () => {
     // Reset the imageContainer to its initial state

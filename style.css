@@ -146,6 +146,17 @@ form h2 {
     display: flex;
 }
 
+.random-btn {
+    background-color: #f4f765;
+    color: #0a0a0a;
+    padding: 10px 20px;
+    border: none;
+    font-size: x-large;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+}
+
 .reset-btn {
     background-color: #d04747;
     color: #fff;
