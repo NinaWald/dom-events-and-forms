@@ -62,7 +62,12 @@ orderButton.addEventListener("click", () => {
 
 
 // An array of fruit names for the random selector
-const fruits = ["apple", "banana", "cherry", "orange"];
+const fruits = [
+    "apple",
+    "banana",
+    "cherry",
+    "orange"
+    ];
 
 randomButton.addEventListener("click", () => {
     // Generate a random index within the range of the fruits array
