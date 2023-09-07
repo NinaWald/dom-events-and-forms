@@ -39,6 +39,20 @@ button.addEventListener("click", () => {
         imageContainer.src = `images/${fruitImages[selectedFruit]}`;
         imageContainer.alt = selectedFruit;
 
+    // Change background color based on the selected fruit
+    if (selectedFruit === "apple") {
+        imageContainer.style.backgroundColor = "green";
+
+    }    else if (selectedFruit === "banana") {
+        imageContainer.style.backgroundColor = "yellow";
+
+    }   else if (selectedFruit === "cherry") {
+        imageContainer.style.backgroundColor = "red";
+
+    }   else if (selectedFruit === "orange") {
+        imageContainer.style.backgroundColor = "orange";
+    }
+
         // Add a console.log to show the selected fruit
         console.log(`Selected fruit: ${selectedFruit}`);
     } else {
@@ -58,6 +72,7 @@ This line below adds a click event listener to the orderButton element.
 orderButton.addEventListener("click", () => {
     imageContainer.src = `images/${fruitImages.order}`;
     imageContainer.alt = "Order";
+    imageContainer.style.backgroundColor = "white";
 })
 
 
@@ -79,6 +94,7 @@ randomButton.addEventListener("click", () => {
     // Set the src and alt attributes of the imageContainer to display the random fruit image
     imageContainer.src = `images/${fruitImages[randomFruit]}`;
     imageContainer.alt = randomFruit;
+    imageContainer.style.backgroundColor = "white";
 
     // Add a console.log to show the selected random fruit
     console.log(`Randomly selected fruit: ${randomFruit}`);
