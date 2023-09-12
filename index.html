@@ -10,13 +10,17 @@
     <header id="main-header">
         <div class="container">
             <h1 id="header-title">Fruit selection</h1>
-        <div class="minion-sound">
-            <a href="#" id="minionSoundButton">
-                <img src="images/fruits.png" alt="fruits">
-            </a>
-        </div>
+            <div class="minion-sound">
+                <a href="#" id="images">
+                    <img src="images/fruits.png" alt="fruits" id="soundButton" onclick="playMinionSound()">
+                </a>
+            </div>
+            <audio id="minionSoundButton">
+                <source src="images/minion.mp3">
+            </audio>
         </div>
     </header>
+    
     <label>
         <form>
             <h1>Choose your favorite fruit:</h1>
@@ -64,3 +68,20 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+<!-- <header id="main-header">
+    <div class="container">
+        <h1 id="header-title">Fruit selection</h1>
+        <div class="minion-sound">
+            <a href="#" id="images">
+                <img src="images/fruits.png" alt="fruits">
+            </a>
+    </div>
+    <audio id="minionSoundButton">
+    <source src="images/minion.mp3"> </audio>
+
+    <button onclick="playMinionSound()" type="button">Play Fruit Sound</button>
+
+    </div>
+</header> -->
