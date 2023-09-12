@@ -147,7 +147,7 @@ form h2 {
 }
 
 .random-btn {
-    background-color: #f4f765;
+    background-color: #f9f984;
     color: #0a0a0a;
     padding: 10px 20px;
     border: none;
@@ -156,6 +156,27 @@ form h2 {
     cursor: pointer;
     display: flex;
 }
+
+.random-button-container {
+    margin-bottom: 30px;
+}
+
+.fruitCount {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 20px;
+    justify-content: center;
+    background-color: rgb(179, 227, 218);
+    flex-direction: column;
+    margin-bottom: 30px;
+    font-size: 20px;
+ }
+
+ p {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+ }
 
 .reset-btn {
     background-color: #d04747;

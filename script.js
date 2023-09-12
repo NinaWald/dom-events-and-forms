@@ -13,6 +13,27 @@ const resetButton = document.getElementById("resetButton");
 const randomButton = document.getElementById("random-button");
 // These lines reference to the HTML element ids
 
+const fruitCounts = {
+    apple: 0,
+    banana: 0,
+    cherry: 0,
+    orange: 0
+};
+
+const fruitCountDisplay = {
+    apple: document.getElementById("appleCount"),
+    banana: document.getElementById("bananaCount"),
+    cherry: document.getElementById("cherryCount"),
+    orange: document.getElementById("orangeCount")
+};
+
+
+/*
+This block below defines an object called fruitImages that maps fruit names
+to image file names (e.g., "apple.png").
+ It also includes an entry for "order" to represent the thumbs-up image
+used when placing an order.
+*/
 const fruitImages = {
     apple: "apple.png",
     banana: "banana.png",
@@ -20,11 +41,6 @@ const fruitImages = {
     orange: "orange.png",
     order: "thumb.png"
 };
-/*
-This block defines an object called fruitImages that maps fruit names
- (e.g., "apple") to image file names (e.g., "apple.png").
- It also includes an entry for "order" to represent the thumb-image used when placing an order.
-*/
 
 /*
 This line below adds a click event listener to the button element.
@@ -52,9 +68,10 @@ button.addEventListener("click", () => {
     }   else if (selectedFruit === "orange") {
         imageContainer.style.backgroundColor = "orange";
     }
-
-        // Add a console.log to show the selected fruit
-        console.log(`Selected fruit: ${selectedFruit}`);
+        // Increment and display the fruit count
+        fruitCounts[selectedFruit]++;
+    // Update the content of the corresponding fruit count display element
+    fruitCountDisplay[selectedFruit].textContent = fruitCounts[selectedFruit];
     } else {
         imageContainer.src = ""; // Clear the image
         imageContainer.alt = "Selected Fruit Image"; // Reset the alt attribute
@@ -104,7 +121,14 @@ resetButton.addEventListener("click", () => {
     // Reset the imageContainer to its initial state
     imageContainer.src = "images/white.png";
     imageContainer.alt = "fruit";
+    imageContainer.style.backgroundColor = "white";
 
     // Reset the dropdown to its initial state
     fruitDropdown.value = "";
+
+      // Clear the fruit counts
+      for (const fruit in fruitCounts) {
+        fruitCounts[fruit] = 0;
+        fruitCountDisplay[fruit].textContent = "0";
+    }
 });
