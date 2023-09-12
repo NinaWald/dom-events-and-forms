@@ -4,14 +4,26 @@ In this top section, I am using the const keyword to declare and assign values
   This makes it clear which elements you're working with in your code,
  and it's a good practice for maintaining code structure and organization.
 */
-
+const minionSoundButton = document.getElementById("minionSoundButton");
 const fruitDropdown = document.getElementById("fruitDropdown");
 const button = document.getElementById("button");
 const imageContainer = document.getElementById("imageContainer");
 const orderButton = document.getElementById("orderButton");
 const resetButton = document.getElementById("resetButton");
 const randomButton = document.getElementById("random-button");
+
 // These lines reference to the HTML element ids
+
+// Create an Audio object for the Minion sound
+const minionSound = new Audio("minion.mp3");
+
+// Add a click event listener to the anchor element
+minionSoundButton.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent the anchor's default behavior (e.g., navigating to a link)
+    
+    // Play the Minion sound
+    minionSound.play();
+});
 
 const fruitCounts = {
     apple: 0,

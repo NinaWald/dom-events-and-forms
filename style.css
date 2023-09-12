@@ -7,6 +7,19 @@
     justify-content: center;
     align-items: center;
 }
+
+.minion-sound {
+    border: solid black 2px;
+    border-radius: 30px;
+    background-color: #50d7b3;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+/* Add hover effect */
+.minion-sound:hover {
+    transform: scale(1.05); /* Increase the scale (1.05 means 105% of the original size) */
+}
+
 #main-header {
     background-color: #ccc;
     width: 100%;
