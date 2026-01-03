@@ -50,6 +50,8 @@ const fruitImages = {
     order: "thumb.png"
 };
 
+let currentSelectedFruit = null;
+
 /*
 This line below adds a click event listener to the button element.
  When the button is clicked,
@@ -76,14 +78,12 @@ button.addEventListener("click", () => {
     }   else if (selectedFruit === "orange") {
         imageContainer.style.backgroundColor = "orange";
     }
-        // Increment and display the fruit count
-        fruitCounts[selectedFruit]++;
-    // Update the content of the corresponding fruit count display element
-    fruitCountDisplay[selectedFruit].textContent = fruitCounts[selectedFruit];
+        currentSelectedFruit = selectedFruit;
     } else {
         imageContainer.src = ""; // Clear the image
         imageContainer.alt = "Selected Fruit Image"; // Reset the alt attribute
         imageContainer.style.backgroundColor = "white";
+        currentSelectedFruit = null;
     }
 });
 /*
@@ -95,6 +95,12 @@ This line below adds a click event listener to the orderButton element.
   indicating that an order is being processed.
 */
 orderButton.addEventListener("click", () => {
+    if (currentSelectedFruit) {
+        // Increment and display the fruit count
+        fruitCounts[currentSelectedFruit]++;
+        // Update the content of the corresponding fruit count display element
+        fruitCountDisplay[currentSelectedFruit].textContent = fruitCounts[currentSelectedFruit];
+    }
     imageContainer.src = `images/${fruitImages.order}`;
     imageContainer.alt = "Order";
     imageContainer.style.backgroundColor = "white";
@@ -120,6 +126,7 @@ randomButton.addEventListener("click", () => {
     imageContainer.src = `images/${fruitImages[randomFruit]}`;
     imageContainer.alt = randomFruit;
     imageContainer.style.backgroundColor = "white";
+    currentSelectedFruit = randomFruit;
 
     // Add a console.log to show the selected random fruit
     console.log(`Randomly selected fruit: ${randomFruit}`);
@@ -133,6 +140,7 @@ resetButton.addEventListener("click", () => {
 
     // Reset the dropdown to its initial state
     fruitDropdown.value = "";
+    currentSelectedFruit = null;
 
       // Clear the fruit counts
       for (const fruit in fruitCounts) {
